@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config build/webpack.config.js"
   },
   "author": "wangbin",
   "license": "ISC",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "json-server": "^0.15.1",
-    "modbus-tcp": "^0.4.13"
+    "modbus-tcp": "^0.4.13",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }

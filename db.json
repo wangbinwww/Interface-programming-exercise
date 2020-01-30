@@ -1,1 +1,31 @@
-{}
+{
+    "num": 0,
+    "name": "wangbin",
+    "password": 12345678,
+    "apps": [{
+        "name": "webAPI",
+        "script": "app",
+        "cwd": "./",
+        "error_file": "./logs/app-err.log",
+        "out_file": "./logs/app-out.log",
+        "log_date_format": "YYYY-MM-DD HH:mm Z",
+        "max_memory_restart": "300M"
+    }],
+    "scripts": {
+        "start": "nodemon ./app.js",
+        "pm2": "pm2 start pm2.json",
+        "pkgmac": "pkg . -t node8-macos-x64 -o app",
+        "pkgwin": "pkg . -t node8-win-x64 -o app",
+        "pkg": "pkg . -t node10-win-x64 -o app"
+    },
+    "bin": "./app.js",
+    "pkg": {
+        "scripts": "workers/**/*.js"
+    },
+    "devDependencies": {
+        "nodemon": "^1.11.0",
+        "pkg": "^4.3.5"
+    }
+
+
+}
